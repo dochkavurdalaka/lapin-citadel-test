@@ -1,0 +1,20 @@
+{
+    "name": "lapin-citadel-test Dev Container",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": ".."
+    },
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "twxs.cmake"
+    ],
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    ],
+    "workspaceFolder": "/workspace",
+    "remoteUser": "root"
+}
