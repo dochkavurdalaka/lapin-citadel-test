@@ -103,8 +103,8 @@ int main(int argc, char* argv[]) {
         paths.emplace_back(argv[i]);
     }
 
-    auto all_files = FindFiles();
-    std::string log_string = log_processor.ProcessFiles(all_files);
+    // auto all_files = FindFiles();
+    std::string log_string = log_processor.ProcessFiles(paths);
 
     PrintResult(sensors_map, rules_map);
     std::cout << log_string;
