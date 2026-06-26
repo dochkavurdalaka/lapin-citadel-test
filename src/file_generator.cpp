@@ -79,8 +79,13 @@ std::string format_number(double val, int precision = 1) {
     return result;
 }
 
-int main() {
+int main(int argc, char* argv[]) {
+    // Параметры
     int N = 4;
+    // на случай если передаем размер N в параметрах командной строки
+    if (argc == 2) {
+        N = std::atoi(argv[1]);
+    }
 
     std::vector<std::string> sensor_descriptions;
     std::vector<
